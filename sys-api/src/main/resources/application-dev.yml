@@ -1,0 +1,14 @@
+server:
+  port: 8070
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.23.156.19:3306/sx_lx?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath:/com/*/*/mapper/*Mapper.xml
+logging:
+  level:
+    com.sxzhyl.controller: debug

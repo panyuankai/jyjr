@@ -1,0 +1,24 @@
+server:
+  port: 8060
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://172.23.156.19:3306/sx_lx?characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis-plus:
+  mapper-locations: classpath:/com/*/*/mapper/*Mapper.xml
+jwt:
+  #http请求头
+  header: Authorization
+  #token起始标识
+  start-with: Bearer
+  #秘钥
+  secret-key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKiuOGSVzac1HH5x3cboD0KapCayatw4G6W59E9Vez6fwix2g5hUFmzRknoZiDREuAXkVi1MqAiQ7Wf8MqqPDvsCAwEAAQ==
+  #过期时间 单位/秒
+  validate-second: 43200
+logging:
+  level:
+    com.sxzhyl.jwt: debug
+
